@@ -5,7 +5,7 @@ package com.example.Apirestfull.Controller;
 
 
 import com.example.Apirestfull.Entity.Client;
-import com.example.Apirestfull.Service.CreerClientService;
+import com.example.Apirestfull.Service.ClientService.CreerClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

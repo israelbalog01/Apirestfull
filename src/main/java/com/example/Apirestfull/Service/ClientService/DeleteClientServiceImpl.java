@@ -1,4 +1,4 @@
-package com.example.Apirestfull.Service;
+package com.example.Apirestfull.Service.ClientService;
 
 import com.example.Apirestfull.Entity.Client;
 import com.example.Apirestfull.Repository.ClientRepository;
