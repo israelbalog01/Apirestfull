@@ -4,7 +4,6 @@ public class Commande {
     private int id;
     private String nom;
 
-    // Assume many-to-one relationship with Client
     private Client client;
 
     public Commande() {

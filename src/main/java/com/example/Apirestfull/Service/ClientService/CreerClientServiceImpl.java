@@ -12,12 +12,12 @@ public class CreerClientServiceImpl implements CreerClientService {
     private final ClientRepository clientRepository;
 
     public CreerClientServiceImpl(ClientRepository clientRepository) {
+
         this.clientRepository = clientRepository;
     }
 
     @Override
     public Client createClient(Client client) {
-        // Ajoutez ici la logique de création du client, si nécessaire
         return clientRepository.save(client);
     }
 }
