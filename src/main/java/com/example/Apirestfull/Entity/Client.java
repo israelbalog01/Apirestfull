@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "client")
@@ -11,7 +12,7 @@ import java.io.Serializable;
 public class Client  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(nullable = false, columnDefinition = "VARCHAR(255)")
     private String nom;
@@ -20,7 +21,7 @@ public class Client  {
     private String prenom;
 
     @Column(nullable = false, columnDefinition = "DATE")
-    private String datenaissance;
+    private LocalDate datenaissance;
 
     @Column(nullable = false, columnDefinition = "VARCHAR(255)")
     private String email;
@@ -29,7 +30,7 @@ public class Client  {
     public Client() {
     }
 
-    public Client(int id, String nom, String prenom, String datenaissance, String email) {
+    public Client(int id, String nom, String prenom, LocalDate datenaissance, String email) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -61,11 +62,11 @@ public class Client  {
         this.prenom = prenom;
     }
 
-    public String getDatenaissance() {
+    public LocalDate getDatenaissance() {
         return datenaissance;
     }
 
-    public void setDatenaissance(String datenaissance) {
+    public void setDatenaissance(LocalDate datenaissance) {
         this.datenaissance = datenaissance;
     }
     public String getEmail() {

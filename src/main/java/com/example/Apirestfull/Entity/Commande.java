@@ -1,25 +1,33 @@
 package com.example.Apirestfull.Entity;
 
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Entity
+@Table(name = "Commande")
+@Data
 public class Commande {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(nullable = false, columnDefinition = "VARCHAR(255)")
     private String nom;
 
-    private Client client;
 
     public Commande() {
     }
 
-    public Commande(int id, String nom, Client client) {
+    public Commande(long id, String nom) {
         this.id = id;
         this.nom = nom;
-        this.client = client;
     }
 
-    public int getId() {
+    public Long getId() {
+
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -29,13 +37,5 @@ public class Commande {
 
     public void setNom(String nom) {
         this.nom = nom;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
     }
 }
